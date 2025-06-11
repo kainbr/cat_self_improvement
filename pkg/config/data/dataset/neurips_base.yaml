@@ -1,0 +1,10 @@
+_target_: pkg.data.neurips.Dataset
+_recursive_: false
+user_features: []
+interaction_features: ???
+position_type: question
+data_path: /home/knowledge-tracing/data
+cache_path: /home/knowledge-tracing/data/cache_dir
+max_num_sequences: null
+max_sequence_len: 100
+incl_test_data: true

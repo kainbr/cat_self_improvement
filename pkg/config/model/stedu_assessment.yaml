@@ -1,0 +1,24 @@
+_target_: pkg.model.stedu.stedu_assessment.Model
+_recursive_: false
+d_model: 128
+
+defaults:
+  - embedding: base
+  - transformer: assessment
+  - encoder: base
+  - decoder: base
+  - attention: standard
+  - masking: response_and_answer
+  - classifier: linear
+  - _self_
+
+encoder:
+  num_layers: 2
+  dropout: 0.2
+decoder:
+  num_layers: ${..encoder.num_layers}
+  dropout: ${..encoder.dropout}
+embedding:
+  initialize_question_to_zero: true
+transformer:
+  share_enc_dec_params: true

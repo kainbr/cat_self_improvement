@@ -1,0 +1,3 @@
+_target_: torch.optim.Adam
+_recursive_: false
+lr: 0.001

@@ -1,0 +1,13 @@
+_target_: pkg.data.Data
+_recursive_: false
+batch_size: 64
+batch_size_eval: 256
+num_workers: 0
+seed: 0
+
+defaults:
+  - dataset: neurips_qsr
+  - _self_
+# dataset:
+#   cache_path: null
+#   max_num_sequences: 100

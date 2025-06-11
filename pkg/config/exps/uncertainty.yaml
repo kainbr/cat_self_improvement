@@ -1,0 +1,9 @@
+# @package _global_
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      model@policy_model: policy_uncertainty
+      data.seed: 0,1,2,3,4
+      num_given_positions: 5,10,20

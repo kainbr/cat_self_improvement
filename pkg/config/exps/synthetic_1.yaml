@@ -1,0 +1,22 @@
+# @package _global_
+
+defaults:
+  - override /data: synthetic_1
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      model@policy_model: policy_random,policy_uncertainty,stedu_policy
+      num_given_positions: 5
+      num_samples: 2
+      finetune_assessment_model: true
+      data.dataset.seed: 1,2,3,4,5
+      data.dataset.num_train_students: 500
+      data.dataset.num_val_students: 1000
+      data.dataset.num_test_students: 1000
+      data.dataset.num_questions: 50
+      data.dataset.ratio_random_questions: 0.0,0.1,0.2,0.3,0.4,0.5
+      data.dataset.num_splits: 5
+      data.dataset.guessing_prob: 0.0
+      data.dataset.slipping_prob: 0.0

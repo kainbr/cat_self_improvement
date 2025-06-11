@@ -1,0 +1,8 @@
+# @package _global_
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      test_config.strategy: random,mfi,kli,becat
+      data_seed: 0,1,2,3,4

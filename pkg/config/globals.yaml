@@ -1,0 +1,6 @@
+hydra:
+  job:
+    chdir: true
+
+# defaults:
+#   - host: ${oc.env:HOSTNAME}

@@ -1,0 +1,5 @@
+_target_: pkg.model.stedu.policy_uncertainty.Model
+_recursive_: false
+
+defaults:
+  - _self_

@@ -1,0 +1,20 @@
+_target_: pkg.data.synthetic.dataloader.Data
+_recursive_: false
+batch_size: 64
+batch_size_eval: 256
+num_workers: 0
+seed: 0
+
+dataset:
+  _target_: pkg.data.synthetic.synthetic_1.Dataset
+  _recursive_: false
+  seed: 1
+  num_train_students: 1000
+  num_val_students: 1000
+  num_test_students: 1000
+  num_questions: 50
+  num_splits: 5
+  ratio_random_questions: 0.1
+  guessing_prob: 0.1
+  slipping_prob: 0.1
+  max_sequence_len: null

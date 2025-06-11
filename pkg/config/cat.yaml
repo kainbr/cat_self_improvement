@@ -1,0 +1,41 @@
+_target_: cat.Logic
+_recursive_: false
+
+device: cuda:0
+eval_modes:
+  - train_eval
+  - val
+  - test
+seed: 7
+debug: false
+
+defaults:
+  - globals
+  - data: base
+  - model@assessment_model: stedu_assessment
+  - model@policy_model: stedu_policy
+  - optimizer: adam
+  - _self_
+
+data:
+  seed: 0
+  dataset:
+    max_sequence_len: 100
+
+optimizer:
+  lr: 0.001
+
+# general
+max_epochs: 500
+num_given_positions: 10
+force_random_num_given_positions: true
+time_inference: false
+
+# assessment model
+max_assessment_epochs: 100
+finetune_assessment_model: true
+
+# policy model
+num_samples: 2
+temperature: 1.0
+response_seq_score_type: loss

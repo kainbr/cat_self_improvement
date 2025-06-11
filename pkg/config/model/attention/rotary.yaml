@@ -1,0 +1,3 @@
+_target_: pkg.model.attention.BaseMultiheadAttention
+_recursive_: false
+attn: rotary

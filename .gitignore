@@ -1,0 +1,12 @@
+.env
+.ipynb_checkpoints
+.pytest_cache
+.vscode
+__pycache__/
+_downloads
+outputs/*
+multirun
+educat/scripts/dataset/assistment2009_reproduced_output/*.csv
+hugging_face_cache
+pkg/pkg.egg-info
+*.DS_Store

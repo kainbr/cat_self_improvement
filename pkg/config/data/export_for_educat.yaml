@@ -1,0 +1,10 @@
+_target_: pkg.data.export_for_educat.Data
+_recursive_: false
+batch_size: 64
+batch_size_eval: 256
+num_workers: 0
+seed: 0
+
+defaults:
+  - dataset: neurips_qsr
+  - _self_

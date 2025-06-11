@@ -1,0 +1,54 @@
+_target_: educat_reproduce.Logic
+_recursive_: false
+
+device: cuda:0
+
+export_data_to_run_dir: true
+data_path: .
+
+data_seed: 0
+
+cdm: IRT
+test_length: 20
+
+time_inference: false
+
+train_config:
+  learning_rate: 0.001
+  batch_size: 256
+  num_epochs: 10
+
+  # for IRT or MIRT
+  num_dim: 1
+
+  # for NeuralCD
+  prednet_len1: 128
+  prednet_len2: 64
+
+test_config:
+  strategy: random
+
+  learning_rate: 0.001
+  batch_size: 64
+  num_epochs: 20
+
+  # for IRT or MIRT
+  num_dim: 1
+
+  # for NeuralCD
+  prednet_len1: 128
+  prednet_len2: 64
+
+  # for BOBCAT
+  policy: notbobcat
+  policy_path: policy.pt
+
+  # for NCAT
+  THRESHOLD: 300
+  start: 0
+  end: 3000
+
+defaults:
+  - data: export_for_educat
+  - globals
+  - _self_

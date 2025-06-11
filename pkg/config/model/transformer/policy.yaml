@@ -1,0 +1,4 @@
+_target_: pkg.model.stedu.transformer.policy.Transformer
+_recursive_: false
+
+share_enc_dec_params: true

@@ -1,0 +1,10 @@
+# @package _global_
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      model@policy_model: policy_random
+      data.seed: 0,1,2,3,4
+      num_given_positions: 5,10,20
+      force_random_num_given_positions: true,false

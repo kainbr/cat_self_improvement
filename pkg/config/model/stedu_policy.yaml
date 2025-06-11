@@ -1,0 +1,22 @@
+_target_: pkg.model.stedu.stedu_policy.Model
+_recursive_: false
+d_model: 128
+
+defaults:
+  - embedding: base
+  - transformer: policy
+  - encoder: base
+  - decoder: base
+  - attention: standard
+  - masking: response_and_answer
+  - classifier: linear
+  - _self_
+
+encoder:
+  num_layers: 4
+  dropout: 0.0
+decoder:
+  num_layers: ${..encoder.num_layers}
+  dropout: ${..encoder.dropout}
+transformer:
+    share_enc_dec_params: true
