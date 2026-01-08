@@ -1,6 +1,8 @@
 # Self-Improvement for Computerized Adaptive Testing
 
-Code for _Self-Improvement for Computerized Adaptive Testing_ (accepted at ECML 2025).
+Code for _Self-Improvement for Computerized Adaptive Testing_ (accepted at ECML 2025, [Springer Nature Link](https://link.springer.com/chapter/10.1007/978-3-032-05981-9_5)).
+
+Yannick Rudolph*, Kai Neubauer*, and Ulf Brefeld (* equal contribution)
 
 > Computerized adaptive testing (CAT) allows for assessing latent traits and abilities of students with fewer items and in less time due to an individualized item selection algorithm based on previous responses. Following recent machine learning solutions to CAT, we study learning both the underlying response model for cognitive diagnosis and a policy for the item selection algorithm jointly from offline training data. While the task of the response model is to predict performances on all unseen items for a user, the goal of the policy is to select the subset of items which maximizes information for the response model. Since subset selection is a combinatorial problem, we propose to leverage an iterative self-improvement approach to policy learning from the field of neural combinatorial optimization while accounting for interdependencies between response model and policy. We specifically focus on the generalization capabilities of transformer-based models and, in contrast to related work, do not rely on optimization of local variables during inference. We report on empirical results.
 
