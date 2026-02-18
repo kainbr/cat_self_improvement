@@ -85,5 +85,4 @@ python cat.py -m +exps=synthetic_1
 ### Knowledge tracing
 
 The code for the knowledge tracing implementation of our model, along with baselines and experiments, is contained in a separate repository. 
-Currently, the code in that repository is undergoing review. 
-Once it’s published, we’ll provide a link to the repository here. 
+It can be found [here](https://github.com/kainbr/kt_set_transformers).
